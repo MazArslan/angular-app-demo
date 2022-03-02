@@ -1,5 +1,5 @@
 ## Build
-FROM node:latest 
+FROM ubi8/nodejs-12 
 
 WORKDIR /usr/src/app
 
