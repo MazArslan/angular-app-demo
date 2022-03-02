@@ -11,6 +11,6 @@ RUN npm install
 
 COPY . .
 
-RUN npm Build
+RUN npm build
 
 CMD ["ng","start"]
