@@ -13,4 +13,4 @@ COPY . .
 
 RUN npm run build
 
-CMD ["ng","start"]
+CMD ["npm","start"]
