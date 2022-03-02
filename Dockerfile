@@ -15,6 +15,10 @@ RUN ng update
 
 RUN npm update
 
+RUN ng update @angular/cli
+
+RUN ng update @angular/core
+
 COPY . .
 
 RUN npm run build
