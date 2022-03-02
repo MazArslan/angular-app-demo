@@ -1,9 +1,11 @@
 ## Build
-FROM ubi8/nodejs-12 
+FROM node:lts 
 
 WORKDIR /usr/src/app
 
 COPY package*.json ./
+
+RUN npm install -g @angular/core
 
 RUN npm install -g @angular/cli
 
