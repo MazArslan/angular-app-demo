@@ -37,7 +37,7 @@ RUN yum upgrade
 
 RUN yum install node
 
-WORKDIR /usr
+WORKDIR /app
 
 COPY . .  
 
