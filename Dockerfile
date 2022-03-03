@@ -23,6 +23,8 @@ RUN npm install
 
 RUN chmod -R 777 /app
 
-# RUN npm run build --prod
+RUN npm run build --prod
 
-CMD ["npm","run", "build"]
+EXPOSE 4000/tcp
+
+CMD ["ng","serve"]
