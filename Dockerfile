@@ -38,3 +38,5 @@ RUN yum upgrade
 WORKDIR /app
 
 COPY . .  
+
+CMD ['echo', 'test']
