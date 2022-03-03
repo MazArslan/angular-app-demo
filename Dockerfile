@@ -9,7 +9,9 @@ RUN npm install -g @angular/core
 
 RUN npm install -g @angular/cli
 
-RUN npm install
+RUN npm install -g @angular/core
+
+RUN npm install -g @angular-devkit/build-angular
 
 RUN ng update @angular/cli --force
 
