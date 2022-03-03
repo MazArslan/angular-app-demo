@@ -35,7 +35,7 @@ RUN yum update -y
 
 RUN yum upgrade -y
 
-RUN dnf module install nodejs
+RUN dnf module install nodejs:12
 
 WORKDIR /app
 
