@@ -41,6 +41,8 @@ WORKDIR /app
 
 COPY . .  
 
+RUN npm config set unsafe-perm true
+
 RUN npm install
 
 CMD tail -f /dev/null
