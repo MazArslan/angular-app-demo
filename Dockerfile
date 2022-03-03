@@ -11,11 +11,11 @@ RUN npm install -g @angular/cli
 
 RUN npm install
 
-RUN ng update @angular/cli
+RUN ng update @angular/cli --force
 
-RUN ng update @angular/core
+RUN ng update @angular/core --foce
 
-RUN ng update
+RUN ng update --force
 
 RUN npm update
 
