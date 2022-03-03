@@ -31,9 +31,13 @@
 
 FROM redhat/ubi8
 
-RUN yum update
+RUN yum update -y
 
-RUN yum upgrade
+RUN yum upgrade -y
+
+RUN yum install -y nodejs
+
+RUN yum install -y npm
 
 WORKDIR /app
 
