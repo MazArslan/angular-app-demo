@@ -35,9 +35,7 @@ RUN yum update -y
 
 RUN yum upgrade -y
 
-RUN yum install -y nodejs
-
-RUN yum install -y npm
+RUN dnf module install nodejs
 
 WORKDIR /app
 
