@@ -1,30 +1,44 @@
-## Build
-FROM node:lts 
+# ## Build
+# FROM node:lts 
 
-WORKDIR /app
+# WORKDIR /app
 
-COPY . .
+# COPY . .
 
-RUN npm install -g @angular/core
+# RUN npm install -g @angular/core
 
-RUN npm install -g @angular/cli
+# RUN npm install -g @angular/cli
 
-RUN npm install -g @angular-devkit/build-angular
+# RUN npm install -g @angular-devkit/build-angular
 
-# RUN ng update --force
+# # RUN ng update --force
 
-RUN npm update
+# RUN npm update
 
-# RUN ng update @angular/cli
+# # RUN ng update @angular/cli
 
-# RUN ng update @angular/core
+# # RUN ng update @angular/core
 
-RUN npm install
+# RUN npm install
 
-RUN chmod -R 777 /app
+# RUN chmod -R 777 /app
 
-RUN npm run build --prod
+# RUN npm run build --prod
 
-EXPOSE 4000/tcp
+# EXPOSE 4000/tcp
 
-CMD ["ng","serve"]
+# CMD ["ng","serve"]
+
+FROM redhat/ubi8
+
+RUN yum update
+
+RUN yum upgrade
+
+RUN yum install node
+
+WORKDIR /usr
+
+COPY . .  
+
+CMD ['sh']
