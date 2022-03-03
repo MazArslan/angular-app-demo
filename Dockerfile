@@ -45,4 +45,8 @@ RUN npm config set unsafe-perm true
 
 RUN npm install
 
+RUN ng update @angular/cli
+
+RUN ng update @angular/core
+
 CMD tail -f /dev/null
