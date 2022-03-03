@@ -38,5 +38,3 @@ RUN yum upgrade
 WORKDIR /app
 
 COPY . .  
-
-CMD ['sh']
