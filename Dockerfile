@@ -15,6 +15,8 @@ RUN npm install -g @angular-devkit/build-angular
 
 RUN ng update --force
 
+RUN rm .browserslistrc
+
 RUN npm update
 
 COPY . .
