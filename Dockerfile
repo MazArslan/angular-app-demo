@@ -39,4 +39,4 @@ WORKDIR /app
 
 COPY . .  
 
-CMD ['echo', 'test']
+CMD ["echo","test"]
