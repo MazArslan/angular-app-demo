@@ -29,7 +29,7 @@
 
 # CMD ["ng","serve"]
 
-FROM redhat/ubi8
+FROM ubi8:ubi
 
 RUN yum update
 
