@@ -1,26 +1,26 @@
 ## Build
 FROM node:lts 
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install -g @angular/core
-
-RUN npm install -g @angular/cli
-
-RUN npm install -g @angular-devkit/build-angular
-
-RUN ng update --force
-
-RUN npm update
-
-RUN ng update @angular/cli
-
-RUN ng update @angular/core
+WORKDIR /app
 
 COPY . .
 
-RUN npm run build
+# RUN npm install -g @angular/core
 
-CMD ["ng","serve"]
+# RUN npm install -g @angular/cli
+
+# RUN npm install -g @angular-devkit/build-angular
+
+# RUN ng update --force
+
+# RUN npm update
+
+# RUN ng update @angular/cli
+
+# RUN ng update @angular/core
+
+RUN npm install
+
+# RUN npm run build --prod
+
+CMD ["npm","run", "build"]
