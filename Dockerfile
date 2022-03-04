@@ -65,4 +65,8 @@ RUN chmod 775 .angular
 
 EXPOSE 4200
 
-CMD ng serve
+EXPOSE 80
+
+EXPOSE 8080
+
+CMD ng serve --prod
