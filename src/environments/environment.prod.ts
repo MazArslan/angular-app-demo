@@ -1,5 +1,5 @@
 
 export const environment = { 
     production: true, 
-    apiUrl: 'http://node-js-api-ms-tls.apps.na46.prod.nextcle.com'
+    apiUrl: '172.30.213.48:8080'
 };

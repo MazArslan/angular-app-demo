@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiUrl: "http://node-js-api-ms-tls.apps.na46.prod.nextcle.com",
+  apiUrl: "172.30.213.48:8080",
   production: false
 };
 
