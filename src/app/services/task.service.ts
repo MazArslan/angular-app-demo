@@ -20,7 +20,9 @@ export class TaskService {
   constructor(private http:HttpClient) { }
 
   getTasks(): Observable<Task[]> {
+    console.log("getting all tasks")
     return this.http.get<Task[]>(this.apiUrl)
+  
   }
 
   deleteTask(task: Task): Observable<Task> {
@@ -30,11 +32,13 @@ export class TaskService {
 
   updateTaskReminder(task: Task): Observable<Task>{
     const url = `${this.apiUrl}/update-task/${task.id}`;
+    console.log("updating task " + task)
     return this.http.put<Task>(url, task, httpOptions)
   }
 
   addTask(task: Task): Observable<Task>{
     const url = `${this.apiUrl}/add-task`;
+    console.log("adding task " + task)
     return this.http.post<Task>(url, task, httpOptions);
   }
 
