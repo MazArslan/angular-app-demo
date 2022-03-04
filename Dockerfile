@@ -69,4 +69,4 @@ EXPOSE 80
 
 EXPOSE 8080
 
-CMD ng serve --configuration production --host 0.0.0.0
+CMD ng serve --configuration production --host 172.30.223.242
