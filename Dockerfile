@@ -61,6 +61,8 @@ WORKDIR /app/test-app
 
 RUN mkdir .angular
 
-RUN chmod 777 .angular
+RUN chmod 775 .angular
 
-CMD tail -f /dev/null
+EXPOSE 4200
+
+CMD ng serve
