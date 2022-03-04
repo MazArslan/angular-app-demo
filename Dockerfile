@@ -43,6 +43,8 @@ RUN npm install -g @angular/cli
 
 COPY . .  
 
+RUN npm install
+
 RUN mkdir .angular
 
 RUN chmod 775 .angular
