@@ -39,20 +39,22 @@ RUN dnf module install nodejs:16 -y
 
 WORKDIR /app
 
-COPY . .  
+# COPY . .  
 
-RUN npm config set unsafe-perm true
+# RUN npm config set unsafe-perm true
 
-RUN npm install
+# RUN npm install
 
-RUN npm install -g @angular/core
+# RUN npm install -g @angular/core
 
 RUN npm install -g @angular/cli
 
-RUN npm install -g @angular-devkit/build-angular
+# RUN npm install -g @angular-devkit/build-angular
 
 # RUN ng update @angular/cli
 
 # RUN ng update @angular/core
+
+RUN ng new test-app
 
 CMD tail -f /dev/null
