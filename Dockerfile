@@ -57,4 +57,8 @@ RUN npm install -g @angular/cli
 
 RUN ng new test-app
 
+WORKDIR /app/test-app
+
+RUN mkdir .angular
+
 CMD tail -f /dev/null
