@@ -61,4 +61,6 @@ WORKDIR /app/test-app
 
 RUN mkdir .angular
 
+RUN chmod 777 .angular
+
 CMD tail -f /dev/null
