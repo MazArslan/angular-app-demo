@@ -20,7 +20,8 @@ export class TaskService {
   constructor(private http:HttpClient) { }
 
   getTasks(): Observable<Task[]> {
-    console.log("getting all tasks")
+    console.log("getting all tasks");
+    console.log(this.apiUrl);
     return this.http.get<Task[]>(this.apiUrl)
   
   }
