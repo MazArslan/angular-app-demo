@@ -2,5 +2,5 @@
 export const environment = { 
     production: true, 
     // need to be URL?
-    apiUrl: '172.30.213.48:8080'
+    apiUrl: 'http://node-js-api-mongo-tls.apps.eu46.prod.nextcle.com'
 };
