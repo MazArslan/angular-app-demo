@@ -51,6 +51,8 @@ RUN chmod 775 .angular
 
 EXPOSE 4200/tcp
 
+RUN cat /etc/hosts 
+
 RUN tail -1 /etc/hosts 
 
 RUN tail -1 /etc/hosts | grep -o '^\S*'
