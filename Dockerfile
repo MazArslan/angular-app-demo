@@ -55,4 +55,4 @@ RUN cat /etc/hosts
 
 RUN echo $(tail -1 /etc/hosts)
 
-CMD ng serve --configuration production --host $(tail -1 /etc/hosts | grep -o '^\S*') --port 4200 --public
+CMD ng serve --configuration production --host $(tail -1 /etc/hosts | grep -o '^\S*') --port 4200
