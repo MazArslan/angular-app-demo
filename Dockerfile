@@ -53,4 +53,6 @@ EXPOSE 4200/tcp
 
 RUN cat /etc/hosts 
 
-CMD ng serve --configuration production --host $(tail -1 /etc/hosts | grep -o '^\S*') --port 4200
+RUN echo $(tail -1 /etc/hosts)
+
+CMD ng serve --configuration production --host $(tail -1 /etc/hosts | grep -o '^\S*') --port 4200 --public
