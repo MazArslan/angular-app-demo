@@ -53,12 +53,4 @@ EXPOSE 4200/tcp
 
 RUN cat /etc/hosts 
 
-RUN tail -1 /etc/hosts 
-
-RUN tail -3 /etc/hosts | grep -m1 -o '^\S*'
-
-RUN export ipadd=$(tail -3 /etc/hosts | grep -m1 -o '^\S*')
-
-RUN echo $(tail -3 /etc/hosts | grep -m1 -o '^\S*')
-
-CMD ng serve --configuration production --host $(tail -3 /etc/hosts | grep -m1 -o '^\S*')
+CMD ng serve --configuration production --host $(tail -1 /etc/hosts | grep -o '^\S*')
