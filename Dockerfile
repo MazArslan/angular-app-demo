@@ -51,7 +51,7 @@ RUN chmod 775 .angular
 
 EXPOSE 4200/tcp
 
-ENV IPADD=$(tail -1 /etc/hosts| grep -o '^\S*')
+ENV IPADD=$(tail -n1 /etc/hosts| grep -o '^\S*')
 
 RUN echo $IPADD
 
