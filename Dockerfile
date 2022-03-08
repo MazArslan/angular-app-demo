@@ -53,7 +53,7 @@ EXPOSE 4200/tcp
 
 RUN tail /etc/hosts 
 
-RUN export IPADD=$(tail -n1 /etc/hosts | grep -o '^\S*')
+RUN export IPADD=$(tail -1 /etc/hosts | grep -o '^\S*')
 
 RUN echo $IPADD
 
