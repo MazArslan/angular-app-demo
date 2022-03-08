@@ -53,8 +53,8 @@ EXPOSE 4200/tcp
 
 RUN tail /etc/hosts 
 
-RUN export IPADD=$(tail -1 /etc/hosts | grep -o '^\S*')
+RUN export ipadd=$(tail -1 /etc/hosts | grep -o '^\S*')
 
-RUN echo $IPADD
+RUN echo $ipadd
 
-CMD ng serve --configuration production --host $IPADD
+CMD ng serve --configuration production --host $ipadd
