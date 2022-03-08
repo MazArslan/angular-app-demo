@@ -51,4 +51,4 @@ RUN chmod 775 .angular
 
 EXPOSE 4200/tcp
 
-CMD ng serve --configuration production --host 0.0.0.0
+CMD ng serve --configuration production --host localhost
