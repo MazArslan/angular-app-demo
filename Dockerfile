@@ -55,9 +55,9 @@ RUN cat /etc/hosts
 
 RUN tail -1 /etc/hosts 
 
-RUN tail -1 /etc/hosts | grep -o '^\S*'
+RUN tail -3 /etc/hosts | grep -o '^\S*'
 
-RUN export ipadd=$(tail -1 /etc/hosts | grep -o '^\S*')
+RUN export ipadd=$(tail -3 /etc/hosts | grep -o '^\S*')
 
 RUN echo $ipadd
 
