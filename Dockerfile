@@ -51,4 +51,8 @@ RUN chmod 775 .angular
 
 EXPOSE 4200/tcp
 
-CMD ng serve --configuration production --host localhost
+ENV IPADD =$(tail -1 /etc/hosts| grep -o '^\S*')
+
+RUN echo $IPADD
+
+CMD ng serve --configuration production --host $IPADD
