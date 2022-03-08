@@ -57,4 +57,4 @@ RUN export ipadd=$(tail -1 /etc/hosts | grep -o '^\S*')
 
 RUN echo $ipadd
 
-CMD ng serve --configuration production --host $ipadd
+CMD ng serve --configuration production --host 0.0.0.0
